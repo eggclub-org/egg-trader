@@ -20,8 +20,6 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -40,16 +38,13 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
-.pytest_cache/
 
 # Translations
 *.mo
@@ -57,9 +52,9 @@ coverage.xml
 
 # Django stuff:
 *.log
+.static_storage/
+.media/
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -77,32 +72,18 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# IPython
-profile_default/
-ipython_config.py
-
 # pyenv
 .python-version
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
+# celery beat schedule file
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
 
 # Environments
 .env
+.env.python
 .venv
 env/
 venv/
@@ -122,8 +103,79 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.dmypy.json
-dmypy.json
 
-# Pyre type checker
-.pyre/
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
+
+*.iml
+
+## Directory-based project format:
+.idea/
+
+## File-based project format:
+*.ipr
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+# Ignore vscode settings
+.vscode/
+
+# Ignore backup files
+*~
+
+# Ignore MAC OS temp
+.DS_Store
+
+# Ignore local config
+config/settings/local.py
+
+# Ignore tmp
+tmp/
+
+# Ignore for local dev
+db.sqlite3
+Makefile
+
+# Dont ignore adminlt2 lib
+!exbot/templates/adminlte/lib
+
+# Ignore staticfiles
+staticfiles/
+
+# Ignore docker compose
+docker-compose.yml
+docker-compose.override.yml
+
+# Ignore node modules
+node_modules/
+
+# Ignore for vuepress docs
+.temp/
+
+# Ignore logs
+logs/*.log.*
+
+# Ignore config
+scripts/config_tradebot.py
+scripts/config.py
+
+# Ignore backup
+scripts/backup/*.sql
+scripts/backup/config.sh
+
+# Ignore csv
+*.csv

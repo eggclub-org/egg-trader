@@ -1,3 +1,9 @@
+# Exchange API
 ccxt==1.31.61
+
+# Numeric
 numpy==1.19.0
 pandas==1.0.5
+
+# CLI
+click==7.1.2
